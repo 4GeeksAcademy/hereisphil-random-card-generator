@@ -1,5 +1,140 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: black;
+  box-sizing: border-box;
+}
 
-body{
-    background: white;
+body {
+  background: green;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 90vh;
+}
+
+h1 {
+  font-size: 1.5;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  min-height: 400px;
+  min-width: 300px;
+  border-radius: 0.5rem;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-side {
+  align-self: flex-start;
+}
+
+.right-side {
+  align-self: flex-end;
+  transform: rotate(180deg);
+}
+
+h2 {
+  font-size: 5rem;
+  align-self: center;
+}
+
+span {
+  font-size: 5rem;
+}
+
+#left-value,
+#right-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: -20px; /* bring closer to suit */
+}
+
+.spade {
+  color: black;
+}
+
+.club {
+  color: black;
+}
+
+.heart {
+  color: red;
+}
+
+.diamond {
+  color: red;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 2px 4px 8px 2px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.6);
+}
+
+form {
+  margin-top: 2rem;
+}
+
+fieldset {
+  padding: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input {
+  padding: 0.25rem 0.5rem;
+  max-width: 10ch;
+}
+
+form > button {
+  max-width: 100px;
+}
+
+p {
+  text-align: center;
+}
+
+footer,
+footer a {
+  text-align: center;
+  font-family: "inter", system-ui, sans-serif;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+footer {
+  padding: 1rem 0;
 }

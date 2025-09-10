@@ -1,35 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-
-    <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <title>Random Card Generator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
-
-    <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-    <script type="module" src="/app.js"></script>
+    <main>
+      <h1>Random Card Generator</h1>
+      <!-- The entire Card object -->
+      <figure class="card">
+        <div class="left-side">
+          <span id="first-suit"></span>
+          <p id="left-value"></p>
+        </div>
+        <h2></h2>
+        <div class="right-side">
+          <span id="second-suit"></span>
+          <p id="right-value"></p>
+        </div>
+      </figure>
+      <!-- Button to manually generate a new card -->
+      <button id="generate-new-card">New Card</button>
+      <!-- Form to allow custom Card size -->
+      <form>
+        <fieldset>
+          <legend>Apply Custom Height & Width</legend>
+          <label for="height-input">Height: </label>
+          <input
+            type="number"
+            id="height-input"
+            name="height"
+            min="400"
+            placeholder="400+"
+            required
+          />
+          <label for="width-input">Width: </label>
+          <input
+            type="number"
+            id="width-input"
+            name="width"
+            min="300"
+            placeholder="300+"
+            required
+          />
+          <button type="submit" id="apply-styles-btn">Apply</button>
+          <p><em>Minimum height is 400px & Minimum width is 300px</em></p>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      &copy; 2025. <a href="https://github.com/hereisphil">hereisphil</a>
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
